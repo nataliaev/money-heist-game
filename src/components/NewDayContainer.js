@@ -1,20 +1,25 @@
 import React from "react";
-import { connect } from "react-redux";
-import { addMoney, addDayOnVault } from "../actions";
+import { useGlobalState } from "../useGlobalState"
 import NewDay from "./NewDay";
+import Stats from './Stats'
 
-function NewDayContainer(props) {
+export default function NewDayContainer(props) {
+  const [ state, dispatch ] = useGlobalState();
+
   const openingVault = () => {
-    return null
+    if (state.daysOnVault === 3) {
+      dispatch({ type: 'ADD_MONEY', payload: 500000 })
+    }
   }
 
   return (
     <div>
+      <Stats state={state} />
+      <button onClick={() => dispatch({ type: 'EDIT_RISK', payload: 10 })}>Set risk</button>
       {/* <Team /> */}
       {/* <Stats /> */}
       <NewDay
-        addMoney={addMoney}
-        addDayOnVault={addDayOnVault}
+        dispatch={dispatch}
         setNewDay={props.setNewDay}
         setIsOver={props.setIsOver}
         setNewMessage={props.setNewMessage}
@@ -23,16 +28,3 @@ function NewDayContainer(props) {
     </div>
   );
 }
-
-const mapStateToProps = state => ({
-  money: state.money,
-  people: state.people,
-  risk: state.risk,
-  daysInside: state.daysInside,
-  daysOnVault: state.daysOnVault
-});
-
-export default connect(
-  mapStateToProps,
-  { addMoney, addDayOnVault }
-)(NewDayContainer);
