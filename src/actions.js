@@ -16,6 +16,15 @@ export const addDayInside = () => {
   };
 };
 
+export const ADD_DAYONVAULT = 'ADD_DAYONVAULT';
+
+export const addDayOnVault = () => {
+  return {
+    type: ADD_DAYONVAULT,
+    payload: 1
+  };
+};
+
 export const EDIT_PEOPLE = 'EDIT_PEOPLE';
 
 export const editPeople = payload => {
