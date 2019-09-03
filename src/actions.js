@@ -7,12 +7,12 @@ export const editRisk = payload => {
   };
 };
 
-export const ADD_DAYINSIDE = 'ADD_DAYSINSIDE';
+export const ADD_DAYINSIDE = 'ADD_DAYINSIDE';
 
-export const addDayInside = () => {
+export const addDayInside = payload => {
   return {
     type: ADD_DAYINSIDE,
-    payload: 1
+    payload
   };
 };
 

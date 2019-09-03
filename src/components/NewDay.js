@@ -1,4 +1,5 @@
 import React from "react";
+import LeaveBlock from './LeaveBlock'
 
 export default function NewDay(props) {
   const {
@@ -22,6 +23,7 @@ export default function NewDay(props) {
             setNewMessage(true);
           }}
         >
+          <img className="vault" src="https://a.mytrend.it/prp/2013/02/448425.jpg" alt="print money" />
           <h2>Print money</h2>
           <h3>You can print 100'000€ today</h3>
         </button>
@@ -35,54 +37,20 @@ export default function NewDay(props) {
             setNewMessage(true);
           }}
         >
+          <img className="vault" src="https://www.stacresearch.com/images/vault_image.jpg" alt="vault" />
           {state.daysOnVault === 3 ? (
             <h2>You already opend the Vault</h2>
           ) : (
             <div>
               <h2>Open Vault</h2>
               <h3>
-                If you spent 3 more days on opening the Vaut, you will get
+                If you spent {3 - state.daysOnVault} more days on opening the Vaut, you will get
                 500'000€
               </h3>
             </div>
           )}
         </button>
-
-        <div className="leave-block">
-          <h2 className="leave-h2">Leave:</h2>
-          <button
-            className="leave-variants"
-            disabled={!state.people.includes(1)}
-            onClick={() => {
-              setIsOver(true);
-              setNewDay(false);
-            }}
-          >
-            <h2>Use a car</h2>
-            <h3>You need to have a Racer in your team</h3>
-          </button>
-          <button
-            className="leave-variants"
-            disabled={state.daysInside < 10}
-            onClick={() => {
-              setIsOver(true);
-              setNewDay(false);
-            }}
-          >
-            <h2>Use a tunnel</h2>
-            <h3>{10 - state.daysInside} Days left for tunnel be ready</h3>
-          </button>
-          <button
-            className="leave-variants"
-            onClick={() => {
-              setIsOver(true);
-              setNewDay(false);
-            }}
-          >
-            <h2>Leave with hostages</h2>
-            <h3>You can't take money with you!</h3>
-          </button>
-        </div>
+        <LeaveBlock state={state} setIsOver={setIsOver} setNewDay={setNewDay} setNewMessage={setNewMessage} />
       </div>
     </div>
   );

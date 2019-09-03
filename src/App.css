@@ -15,6 +15,14 @@
   margin: 0 auto;
 }
 
+.variant-button h3 {
+  font-size: 18px;
+}
+
+.variant-button h2 {
+  font-size: 24px;
+}
+
 .variants-block {
   display: flex;
   flex-flow: row;
@@ -23,7 +31,7 @@
 }
 
 .new-days-container {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .leave-block {
@@ -72,4 +80,59 @@
   transform: translateY(2px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   border-bottom: none;
+}
+
+.call-your-team-button {
+  -moz-box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  background-color: #1a3a3a;
+  border: 1px solid #1a3a3a;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px;
+} 
+
+.call-your-team-button:hover {
+  background: linear-gradient(to bottom, #1a3a3a 5%, #5c7457 100%);
+  background-color: #1a3a3a;
+}
+
+.hello {
+  font-family: 'Gloria Hallelujah', cursive, sans-serif;
+}
+
+.rules-text {
+  font-family: 'Manjari', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.people-img {
+  max-width: 160px;
+  margin: 10px;
+}
+
+.people {
+  display: flex;
+  flex-flow: row;
+  margin: auto;
+}
+
+.top-block {
+  display: flex;
+  flex-flow: row;
+}
+
+.stats-block {
+  text-align: left;
+}
+
+.vault {
+  width: 300px;
 }

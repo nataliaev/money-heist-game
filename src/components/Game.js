@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useGlobalState } from "../useGlobalState";
 import Rules from './Rules'
 // import EndPageContainer from './EndPageContainer'
 import NewDayContainer from './NewDayContainer'
@@ -10,9 +11,10 @@ export default function Game() {
   const [isOver, setIsOver] = useState(false);
   const [isNewDay, setNewDay] = useState(false)
   const [isNewMessage, setNewMessage] = useState(false)
+  const [state] = useGlobalState();
 
   if (isStarted === true) {
-    return <Rules setIsStarted={setIsStarted} setNewDay={setNewDay}/>
+    return <Rules setIsStarted={setIsStarted} setNewDay={setNewDay} people={state.people}/>
   // } else if (isOver === true) {
   //   return <EndPageContainer setIsStarted={setIsStarted} setIsOver={setIsOver}/>
   } else if (isNewDay === true) {
