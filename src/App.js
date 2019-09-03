@@ -1,11 +1,12 @@
 import React from "react";
-import GameContainer from './components/GameContainer'
+import { Route } from "react-router-dom";
+import Game from './components/Game'
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Route exact path="/" component={GameContainer} />
+      <Route exact path="/" component={Game} />
     </div>
   );
 }
