@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+import { Provider } from "./useGlobalState"
+import reducer from './reducers';
+import Game from "./components/Game";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider reducer={reducer} initialState={{
+      daysInside: 0,
+      daysOnVault: 0,
+      money: 0,
+      people: [1, 2, 3, 4, 5, 6],
+      risk: 50
+    }}>
+      <div className="App">
+        <Route exact path="/" component={Game} />
+      </div>
+    </Provider>
   );
 }
 
