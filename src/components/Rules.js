@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Rules(props) {
   return (
-    <div className="rules">
+    <div className="rules-container">
       <h1>Hello Professor!</h1>
       <h2>
         Today is the main day of your life. Your team is inside of the Money
@@ -11,9 +11,9 @@ export default function Rules(props) {
         to:
       </h2>
 
-        <h2>print money</h2>
-        <h2>open the vault</h2>
-        <h2>leave</h2>
+      <h2>print money</h2>
+      <h2>open the vault</h2>
+      <h2>leave</h2>
 
       <h2>Different tasks needs different skills. So meet your team:</h2>
       <h2>
@@ -26,6 +26,7 @@ export default function Rules(props) {
         level is very high you may be caught by police
       </h2>
       <button
+        className="call-your-team-button"
         onClick={() => {
           props.setIsStarted(false);
           props.setNewDay(true);

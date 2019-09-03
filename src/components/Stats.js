@@ -5,7 +5,7 @@ export default function Stats(props) {
 
   return (
     <div>
-      <h2>Money: {money}</h2>
+      <h2>Money: {money}€</h2>
       <h2>Days inside: {daysInside}</h2>
       <h2>Risk level: {risk}</h2>
     </div>

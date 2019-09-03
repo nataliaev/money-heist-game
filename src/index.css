@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('http://wpc.72C72.betacdn.net/8072C72/lvi-images/sites/default/files/styles/landscape_1170_658/public/nota_periodistica/lacasadepapelmaqueta.jpg');
+  background-size: cover;
 }
 
 code {

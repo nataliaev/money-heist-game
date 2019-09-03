@@ -2,19 +2,74 @@
   text-align: center;
 }
 
+.rules-container {
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 35px;
+  background-image: url(https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL3Jlc291cmNlcy9TZWFtbGVzc19DcnVtcGxlZF9QYXBlcl9QcmV2aWV3MS5wbmc&q=90&enlarge=true&h=1036&w=1600)
+}
+
 .variant-button {
-  width: 200px;
-  height: 200px;
+  width: 370px;
+  height: 370px;
   margin: 0 auto;
 }
 
 .variants-block {
   display: flex;
   flex-flow: row;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .new-days-container {
   margin: 0 auto
+}
+
+.leave-block {
+  display: flex;
+  flex-flow: column;
+  width: 370px;
+}
+
+.leave-variants {
+  margin: 10px auto;
+  width: 360px;
+}
+
+.leave-h2 {
+  margin: 0 auto;
+}
+
+.go-inside-button {
+  position: absolute;
+  left: 46%;
+  top: 75%;
+  font-size: 22px;
+}
+
+.go-inside-button{
+  display: inline-block;
+  text-decoration: none;
+  background: red;
+  color: #FFF;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px red;
+  transition: .4s;
+}
+
+.go-inside-button:active{
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
 }
