@@ -9,7 +9,8 @@ export default function NewDay(props) {
     setIsOver,
     setNewMessage,
     printMoney,
-    openVault
+    openVault,
+    amountOfMoney
   } = props;
 
   return (
@@ -23,7 +24,7 @@ export default function NewDay(props) {
             alt="print money"
           />
           <h2>Print money</h2>
-          <h3>You can print 100'000€ today</h3>
+          <h3>You can print {amountOfMoney}€ today</h3>
         </button>
         <button
           className="variant-button"
@@ -41,8 +42,7 @@ export default function NewDay(props) {
             <div>
               <h2>Open Vault</h2>
               <h3>
-                If you spent {3 - state.daysOnVault} more days on opening the
-                Vaut, you will get 500'000€
+                Open Vault for {3 - state.daysOnVault} more days and get 500'000€
               </h3>
             </div>
           )}
