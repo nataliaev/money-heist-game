@@ -8,7 +8,7 @@ export default function LeaveBlock(props) {
       <h2 className="leave-h2">Leave:</h2>
       <button
         className="leave-variants"
-        disabled={!state.people.includes("Racer")}
+        disabled={!state.people.find(role => role.name === "Racer")}
         onClick={() => {
           setIsOver(true);
           setNewDay(false);

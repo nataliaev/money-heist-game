@@ -19,10 +19,8 @@ export default function MessageContainer(props) {
       payload: messages[randomNumber].riskLevel
     });
     dispatch({ type: "ADD_DAYINSIDE", payload: 1 });
-    countResult(newRiskLevel, dispatch);
-    if (state.result === false) {
-      setIsOver(true);
-    } else {
+    countResult(newRiskLevel, dispatch, setIsOver, setNewDay, setNewMessage, setIsDistracting);
+    if (newRiskLevel < 70) {
       setNewDay(true);
       setNewMessage(false);
     }

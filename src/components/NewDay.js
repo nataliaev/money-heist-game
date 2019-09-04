@@ -15,7 +15,7 @@ export default function NewDay(props) {
 
   return (
     <div className="new-days-container">
-      <h2>Professor, tell your team what to do today!</h2>
+      <h2 className="new-day">Professor, tell your team what to do today!</h2>
       <div className="variants-block">
         <button className="variant-button" onClick={printMoney}>
           <img

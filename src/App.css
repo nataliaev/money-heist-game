@@ -16,6 +16,10 @@
   border-radius: 5px;
 }
 
+.variant-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .variant-button h3 {
   font-size: 18px;
 }
@@ -35,6 +39,10 @@
   margin: 0 auto;
 }
 
+.new-day {
+  margin: 40px auto;
+}
+
 .leave-block {
   display: flex;
   flex-flow: column;
@@ -45,6 +53,10 @@
   margin: 10px auto;
   width: 360px;
   border-radius: 5px;
+}
+
+.leave-variants:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .leave-h2 {
@@ -191,7 +203,7 @@
   display: flex;
   flex-flow: row;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .message-variant-button {
@@ -199,6 +211,10 @@
   height: 200px;
   margin: 10px auto;
   border-radius: 5px;
+}
+
+.message-variant-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .message-variant-button h3 {

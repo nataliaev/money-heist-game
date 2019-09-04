@@ -24,7 +24,7 @@ export default function Game() {
   } else if (isNewMessage === true) {
     return <MessageContainer setNewDay={setNewDay} setNewMessage={setNewMessage} setIsOver={setIsOver} setIsDistracting={setIsDistracting} />
   } else if (isDistracting === true) {
-    return <ChooseMember setNewDay={setNewDay} setIsOver={setIsOver} setIsDistracting={setIsDistracting}/>
+    return <ChooseMember setNewDay={setNewDay} setIsOver={setIsOver} setIsDistracting={setIsDistracting} setNewMessage={setNewMessage} />
   } else {
     return <StartPage setIsStarted={setIsStarted}/>
   }
