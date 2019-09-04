@@ -33,24 +33,28 @@ export default function MessageContainer(props) {
           <h2 className="message">{messages[randomNumber].message}</h2>
         </div>
         <div className="message-variants-block">
-          <button
-            className="message-variant-button"
-            onClick={continueGame}
-          >
+          <button className="message-variant-button" onClick={continueGame}>
             <h2>Pray and go to sleep</h2>
             <h3>Risk level for tomorrow will be</h3>
             <h2>{newRiskLevel}%</h2>
           </button>
           <button
             className="message-variant-button"
+            disabled={state.people.length === 1}
             onClick={distraction}
           >
-            <h2>Distract the police</h2>
-            <h3>
-              You will lose one of your team members and risk level for tomorrow
-              will be
-            </h3>
-            <h2>{state.risk - 10}%</h2>
+            {state.people.length === 1 ? (
+              <h3>You don't have enough people to distract the police</h3>
+            ) : (
+              <div>
+                <h2>Distract the police</h2>
+                <h3>
+                  You will lose one of your team members and risk level for
+                  tomorrow will be
+                </h3>
+                <h2>{state.risk - 10}%</h2>
+              </div>
+            )}
           </button>
         </div>
         <LeaveBlock
