@@ -8,10 +8,10 @@ import "./App.css";
 function App() {
   
   const initialState = {
-    daysInside: 0,
+    daysInside: 1,
     daysOnVault: 0,
     money: 0,
-    people: [1, 2, 3, 4, 5, 6],
+    people: ["Racer", "Hacker", "Demolition", "Strongman", "Counterfeiter", "Negotiator"],
     risk: 50
   };
 

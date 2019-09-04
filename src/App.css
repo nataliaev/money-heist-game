@@ -120,10 +120,29 @@
   margin: 10px;
 }
 
+.people-img:hover {
+  animation: shake 0.7s; 
+  animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .people {
   display: flex;
   flex-flow: row;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .top-block {
@@ -190,4 +209,23 @@
   flex-flow: column;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.people-buttons-block {
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 35px;
+  background-image: url(https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL3Jlc291cmNlcy9TZWFtbGVzc19DcnVtcGxlZF9QYXBlcl9QcmV2aWV3MS5wbmc&q=90&enlarge=true&h=1036&w=1600); 
+}
+
+.people-rules-block {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.person-name {
+  font-size: 24px;
+  margin: 5px auto;
+  font-family: 'Permanent Marker', cursive;
 }

@@ -69,6 +69,7 @@ export default function MessageContainer(props) {
         </div>
         <LeaveBlock
             state={state}
+            dispatch={dispatch}
             setIsOver={setIsOver}
             setNewDay={setNewDay}
             setNewMessage={setNewMessage}
