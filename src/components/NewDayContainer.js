@@ -10,6 +10,10 @@ export default function NewDayContainer(props) {
 
   const amountOfMoney = 40000 + 10000 * state.people.length;
 
+  const amountOfMoneyToString = amountOfMoney.toString()
+
+  const amountOfMoneySliced = amountOfMoneyToString.slice(0, (amountOfMoneyToString.length - 3)) + "'000"
+
   const printMoney = () => {
     dispatch({ type: "ADD_MONEY", payload: amountOfMoney });
     setNewDay(false);
@@ -39,7 +43,7 @@ export default function NewDayContainer(props) {
         setNewMessage={setNewMessage}
         printMoney={printMoney}
         openVault={openVault}
-        amountOfMoney={amountOfMoney}
+        amountOfMoneySliced={amountOfMoneySliced}
       />
     </div>
   );
