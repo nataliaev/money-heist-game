@@ -110,6 +110,11 @@
   font-family: 'Gloria Hallelujah', cursive, sans-serif;
 }
 
+.list {
+  font-family: 'Gloria Hallelujah', cursive, sans-serif;
+  margin: 0 auto;
+}
+
 .rules-text {
   font-family: 'Manjari', sans-serif;
   letter-spacing: 1.5px;
@@ -240,6 +245,13 @@
   display: flex;
   flex-flow: row;
   max-width: 300px;
+  margin: 0 auto;
+}
+
+.buttons-table-page {
+  display: flex;
+  flex-flow: row;
+  max-width: 600px;
   margin: 0 auto;
 }
 

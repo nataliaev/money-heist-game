@@ -10,12 +10,16 @@ export default function ResultsTable(props) {
     setNewMessage,
     setIsDistracting,
     dispatch,
-    tableMoney
+    tableMoney,
+    nextPage,
+    previousPage
   } = props;
 
   return (
     <div className="rules-container">
-      <h2 className="hello">Your results: {money}€ / {daysInside} days inside</h2>
+      <h2 className="hello">
+        Your results: {money}€ / {daysInside} days inside
+      </h2>
       <div className="table-container">
         <table>
           <tbody>
@@ -35,15 +39,27 @@ export default function ResultsTable(props) {
                 ))}
           </tbody>
         </table>
-        <img className="table-img" src="https://www.thetvdb.com/banners/actors/421516.jpg" alt="Professor" />
+        <img
+          className="table-img"
+          src="https://www.thetvdb.com/banners/actors/421516.jpg"
+          alt="Professor"
+        />
       </div>
-      <ButtonNewGame
-        dispatch={dispatch}
-        setIsStarted={setIsStarted}
-        setIsOver={setIsOver}
-        setNewMessage={setNewMessage}
-        setIsDistracting={setIsDistracting}
-      />
+      <div className="buttons-table-page">
+        <button onClick={previousPage} className="call-your-team-button">
+          Previous page
+        </button>
+        <ButtonNewGame
+          dispatch={dispatch}
+          setIsStarted={setIsStarted}
+          setIsOver={setIsOver}
+          setNewMessage={setNewMessage}
+          setIsDistracting={setIsDistracting}
+        />
+        <button onClick={nextPage} className="call-your-team-button">
+          Next page
+        </button>
+      </div>
     </div>
   );
 }
