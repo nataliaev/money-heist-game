@@ -8,21 +8,15 @@ export default function NewDay(props) {
     setNewDay,
     setIsOver,
     setNewMessage,
-    openingVault
+    printMoney,
+    openVault
   } = props;
 
   return (
     <div className="new-days-container">
       <h2>Professor, tell your team what to do today!</h2>
       <div className="variants-block">
-        <button
-          className="variant-button"
-          onClick={() => {
-            dispatch({ type: "ADD_MONEY", payload: 100000 });
-            setNewDay(false);
-            setNewMessage(true);
-          }}
-        >
+        <button className="variant-button" onClick={printMoney}>
           <img
             className="vault"
             src="https://a.mytrend.it/prp/2013/02/448425.jpg"
@@ -34,12 +28,7 @@ export default function NewDay(props) {
         <button
           className="variant-button"
           disabled={state.daysOnVault === 3}
-          onClick={() => {
-            dispatch({ type: "ADD_DAYONVAULT", payload: 1 });
-            openingVault();
-            setNewDay(false);
-            setNewMessage(true);
-          }}
+          onClick={openVault}
         >
           <img
             className="vault"

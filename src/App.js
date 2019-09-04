@@ -12,7 +12,8 @@ function App() {
     daysOnVault: 0,
     money: 0,
     people: ["Racer", "Hacker", "Demolition", "Strongman", "Counterfeiter", "Negotiator"],
-    risk: 50
+    risk: 40,
+    result: true
   };
 
   return (

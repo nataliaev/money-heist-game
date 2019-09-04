@@ -87,3 +87,12 @@ export const setDayOnVault = payload => {
     payload
   };
 };
+
+export const SET_RESULT = 'SET_RESULT';
+
+export const setResult = payload => {
+  return {
+    type: SET_RESULT,
+    payload
+  };
+};
