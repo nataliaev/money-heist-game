@@ -235,3 +235,118 @@
   margin: 20px auto;
   border-radius: 10px;
 }
+
+.buttons-won-page {
+  display: flex;
+  flex-flow: row;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* form style */
+
+.input-form {
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+
+.input-button {
+  -moz-box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  box-shadow: inset 0px 1px 0px 0px #1a3a3a;
+  background-color: #1a3a3a;
+  border: 1px solid #1a3a3a;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px;
+} 
+
+.input-button:hover {
+  background: linear-gradient(to bottom, #1a3a3a 5%, #5c7457 100%);
+  background-color: #1a3a3a;
+}
+
+.form {
+  font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.form-title {
+  background: #1a3a3a;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	text-shadow: none;
+}
+
+/* table style */
+
+.table-container {
+  display: flex;
+  flex-flow: row;
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.table-img {
+  margin: 0 45px;
+  border-radius: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #A89382;
+  color: white;
+}
+
+th {
+  background-color: #1A3A3A;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  text-shadow: 2px 1px white;
+}
+
+.table-link {
+  color: #1A3A3A;
+  font-weight: bold;
+}
