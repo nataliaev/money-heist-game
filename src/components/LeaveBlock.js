@@ -1,14 +1,14 @@
 import React from "react";
 
 export default function LeaveBlock(props) {
-  const { state, setNewDay, setIsOver, setNewMessage } = props;
+  const { state, dispatch, setNewDay, setIsOver, setNewMessage } = props;
 
   return (
     <div className="leave-block">
       <h2 className="leave-h2">Leave:</h2>
       <button
         className="leave-variants"
-        disabled={!state.people.includes(1)}
+        disabled={!state.people.includes("Racer")}
         onClick={() => {
           setIsOver(true);
           setNewDay(false);
@@ -20,7 +20,7 @@ export default function LeaveBlock(props) {
       </button>
       <button
         className="leave-variants"
-        disabled={state.daysInside < 10}
+        disabled={state.daysInside < 11}
         onClick={() => {
           setIsOver(true);
           setNewDay(false);
@@ -29,7 +29,7 @@ export default function LeaveBlock(props) {
       >
         <h2>Use a tunnel</h2>
         {state.daysInside < 10 ? (
-          <h3>{10 - state.daysInside} Days left for tunnel be ready</h3>
+          <h3>{11 - state.daysInside} Days left for tunnel be ready</h3>
         ) : (
           <h3>Yoy can leave with your money</h3>
         )}
@@ -37,6 +37,7 @@ export default function LeaveBlock(props) {
       <button
         className="leave-variants"
         onClick={() => {
+          dispatch({ type: "DELETE_MONEY", payload: 0 });
           setIsOver(true);
           setNewDay(false);
           setNewMessage(false);

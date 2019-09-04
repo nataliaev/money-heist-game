@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalState } from "../useGlobalState";
-import Rules from './Rules'
-// import EndPageContainer from './EndPageContainer'
+import Rules from './Rules' 
+import EndPageContainer from './EndPageContainer'
 import NewDayContainer from './NewDayContainer'
 import MessageContainer from './MessageContainer'
 import StartPage from './StartPage'
@@ -17,8 +17,8 @@ export default function Game() {
 
   if (isStarted === true) {
     return <Rules setIsStarted={setIsStarted} setNewDay={setNewDay} people={state.people}/>
-  // } else if (isOver === true) {
-  //   return <EndPageContainer setIsStarted={setIsStarted} setIsOver={setIsOver}/>
+  } else if (isOver === true) {
+     return <EndPageContainer setIsStarted={setIsStarted} setIsOver={setIsOver}/>
   } else if (isNewDay === true) {
      return <NewDayContainer setNewMessage={setNewMessage} setIsOver={setIsOver} setNewDay={setNewDay}/>
   } else if (isNewMessage === true) {
