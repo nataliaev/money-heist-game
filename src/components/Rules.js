@@ -11,9 +11,9 @@ export default function Rules(props) {
         them tasks to:
       </h2>
 
-      <h2 className="hello">- print money</h2>
-      <h2 className="hello">- open the vault</h2>
-      <h2 className="hello">- leave</h2>
+      <h2 className="list">- print money</h2>
+      <h2 className="list">- open the vault</h2>
+      <h2 className="list">- leave</h2>
 
       <h2 className="rules-text">
         Different tasks needs different skills. So meet your team:
@@ -22,7 +22,7 @@ export default function Rules(props) {
         <Team people={props.people} />
       </div>
       <h2 className="rules-text">
-        Things happen. So you can expect getting some urgent messages. Response
+        You can expect getting some urgent messages. Response
         to them carefully. <br></br> If you will choose diversion, to catch
         attention of police, than you will lose one person from your team.
       </h2>
