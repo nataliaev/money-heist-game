@@ -1,12 +1,7 @@
 import React from "react";
 
 export default function LeaveBlock(props) {
-  const {
-    state,
-    setNewDay,
-    setIsOver,
-    setNewMessage
-  } = props;
+  const { state, setNewDay, setIsOver, setNewMessage } = props;
 
   return (
     <div className="leave-block">
@@ -33,7 +28,11 @@ export default function LeaveBlock(props) {
         }}
       >
         <h2>Use a tunnel</h2>
-        <h3>{10 - state.daysInside} Days left for tunnel be ready</h3>
+        {state.daysInside < 10 ? (
+          <h3>{10 - state.daysInside} Days left for tunnel be ready</h3>
+        ) : (
+          <h3>Yoy can leave with your money</h3>
+        )}
       </button>
       <button
         className="leave-variants"

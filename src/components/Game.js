@@ -5,10 +5,12 @@ import Rules from './Rules'
 import NewDayContainer from './NewDayContainer'
 import MessageContainer from './MessageContainer'
 import StartPage from './StartPage'
+import ChooseMember from './ChooseMember'
 
 export default function Game() {
   const [isStarted, setIsStarted] = useState(false);
   const [isOver, setIsOver] = useState(false);
+  const [isDistracting, setIsDistracting] = useState(false)
   const [isNewDay, setNewDay] = useState(false)
   const [isNewMessage, setNewMessage] = useState(false)
   const [state] = useGlobalState();
@@ -20,7 +22,9 @@ export default function Game() {
   } else if (isNewDay === true) {
      return <NewDayContainer setNewMessage={setNewMessage} setIsOver={setIsOver} setNewDay={setNewDay}/>
   } else if (isNewMessage === true) {
-    return <MessageContainer setNewDay={setNewDay} setNewMessage={setNewMessage} setIsOver={setIsOver}/>
+    return <MessageContainer setNewDay={setNewDay} setNewMessage={setNewMessage} setIsOver={setIsOver} setIsDistracting={setIsDistracting} />
+  } else if (isDistracting === true) {
+    return <ChooseMember setNewDay={setNewDay} setIsOver={setIsOver} setIsDistracting={setIsDistracting}/>
   } else {
     return <StartPage setIsStarted={setIsStarted}/>
   }
