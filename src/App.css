@@ -243,6 +243,8 @@
   margin: 0 auto;
 }
 
+/* form style */
+
 .input-form {
   box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -301,4 +303,50 @@
 	font-weight: 100;
 	padding: 20px;
 	text-shadow: none;
+}
+
+/* table style */
+
+.table-container {
+  display: flex;
+  flex-flow: row;
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.table-img {
+  margin: 0 45px;
+  border-radius: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #A89382;
+  color: white;
+}
+
+th {
+  background-color: #1A3A3A;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  text-shadow: 2px 1px white;
+}
+
+.table-link {
+  color: #1A3A3A;
+  font-weight: bold;
 }

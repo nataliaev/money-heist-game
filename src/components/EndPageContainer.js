@@ -25,10 +25,6 @@ export default function EndPageContainer(props) {
     setIsTableOpen(true);
   };
 
-  const hideTable = () => {
-    setIsTableOpen(false);
-  };
-
   if (isTableOpen === true) {
     return (
       <ResultsTableContainer
@@ -38,7 +34,6 @@ export default function EndPageContainer(props) {
         setIsOver={setIsOver}
         setNewMessage={setNewMessage}
         setIsDistracting={setIsDistracting}
-        hideTable={hideTable}
       />
     );
   } else if (result === true && state.money > 0) {
@@ -65,6 +60,7 @@ export default function EndPageContainer(props) {
         setIsOver={setIsOver}
         setNewMessage={setNewMessage}
         setIsDistracting={setIsDistracting}
+        openTable={openTable}
       />
     );
   } else {

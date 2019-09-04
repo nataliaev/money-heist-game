@@ -1,8 +1,16 @@
 import React from "react";
-import ButtonNewGame from './ButtonNewGame'
+import ButtonNewGame from "./ButtonNewGame";
 
 export default function NoMoney(props) {
-  const { setIsStarted, setIsOver, setNewMessage, setIsDistracting, state, dispatch } = props;
+  const {
+    setIsStarted,
+    setIsOver,
+    setNewMessage,
+    setIsDistracting,
+    state,
+    dispatch,
+    openTable
+  } = props;
 
   return (
     <div className="rules-container">
@@ -10,8 +18,28 @@ export default function NoMoney(props) {
       <h2>Your team spent {state.daysInside} days inside...</h2>
       <h2>but they had to leave without money.</h2>
       <h2>May be next time you will be more lucky!</h2>
-      <img className="end-game-img" src="https://www.funx.nl/images/2018/11/04_b3_la-casa-de-papel-money-heist-season-3.jpeg" alt="no-money" />
-      <ButtonNewGame dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} setNewMessage={setNewMessage} setIsDistracting={setIsDistracting}/>
+        <img
+          className="end-game-img"
+          src="https://www.funx.nl/images/2018/11/04_b3_la-casa-de-papel-money-heist-season-3.jpeg"
+          alt="no-money"
+        />
+        <div className="buttons-won-page">
+        <button
+          className="call-your-team-button"
+          onClick={() => {
+            openTable();
+          }}
+        >
+          Best results
+        </button>
+        <ButtonNewGame
+          dispatch={dispatch}
+          setIsStarted={setIsStarted}
+          setIsOver={setIsOver}
+          setNewMessage={setNewMessage}
+          setIsDistracting={setIsDistracting}
+        />
+      </div>
     </div>
   );
 }
