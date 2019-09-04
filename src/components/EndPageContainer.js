@@ -6,15 +6,15 @@ import NoMoney from './NoMoney'
 
 export default function EndPageContainer(props) {
   const [state, dispatch] = useGlobalState();
-  const { setIsStarted, setIsOver } = props;
+  const { setIsStarted, setIsOver, setNewMessage, setIsDistracting } = props;
 
-  const result = true
+  const { result } = state
 
   if (result === true && state.money > 0) {
-    return <Won state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} />
+    return <Won state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} setNewMessage={setNewMessage} setIsDistracting={setIsDistracting}/>
   } else if (result === true) {
-    return <NoMoney state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} />
+    return <NoMoney state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} setNewMessage={setNewMessage} setIsDistracting={setIsDistracting}/>
   } else {
-    return <Lost state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} />
+    return <Lost state={state} dispatch={dispatch} setIsStarted={setIsStarted} setIsOver={setIsOver} setNewMessage={setNewMessage} setIsDistracting={setIsDistracting}/>
   }
 }

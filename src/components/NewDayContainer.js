@@ -6,12 +6,26 @@ import Team from "./Team";
 
 export default function NewDayContainer(props) {
   const [state, dispatch] = useGlobalState();
+  const {
+    setNewDay,
+    setNewMessage,
+    setIsOver
+  } = props;
 
-  const openingVault = () => {
+  const printMoney = () => {
+    dispatch({ type: "ADD_MONEY", payload: 100000 });
+    setNewDay(false);
+    setNewMessage(true);
+  }
+
+  const openVault = () => {
+    dispatch({ type: "ADD_DAYONVAULT", payload: 1 });
     if (state.daysOnVault === 2) {
       dispatch({ type: "ADD_MONEY", payload: 500000 });
     }
-  };
+    setNewDay(false);
+    setNewMessage(true);
+  }
 
   return (
     <div className="rules-container">
@@ -22,10 +36,11 @@ export default function NewDayContainer(props) {
       <NewDay
         state={state}
         dispatch={dispatch}
-        setNewDay={props.setNewDay}
-        setIsOver={props.setIsOver}
-        setNewMessage={props.setNewMessage}
-        openingVault={openingVault}
+        setNewDay={setNewDay}
+        setIsOver={setIsOver}
+        setNewMessage={setNewMessage}
+        printMoney={printMoney}
+        openVault = {openVault}
       />
     </div>
   );

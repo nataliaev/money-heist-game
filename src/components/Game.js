@@ -18,7 +18,7 @@ export default function Game() {
   if (isStarted === true) {
     return <Rules setIsStarted={setIsStarted} setNewDay={setNewDay} people={state.people}/>
   } else if (isOver === true) {
-     return <EndPageContainer setIsStarted={setIsStarted} setIsOver={setIsOver}/>
+     return <EndPageContainer setIsStarted={setIsStarted} setIsOver={setIsOver} setNewMessage={setNewMessage} setIsDistracting={setIsDistracting}/>
   } else if (isNewDay === true) {
      return <NewDayContainer setNewMessage={setNewMessage} setIsOver={setIsOver} setNewDay={setNewDay}/>
   } else if (isNewMessage === true) {
