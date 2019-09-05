@@ -137,8 +137,13 @@
   margin: 10px;
 }
 
+.people-img-still {
+  max-width: 160px;
+  margin: 10px;
+}
+
 .people-img:hover {
-  animation: shake 0.7s; 
+  animation: shake 0.5s; 
   animation-iteration-count: infinite; 
 }
 
