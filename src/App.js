@@ -11,7 +11,7 @@ function App() {
     daysInside: 1,
     daysOnVault: 0,
     money: 0,
-    people: [{name: "Racer", url: "/images/racer.jpg"}, {name: "Hacker", url: "/images/hacker.jpg"}, {name: "Demolition", url: "/images/demolition.jpg"}, {name: "Strongman", url: "/images/strongman.jpg"}, {name: "Counterfeiter", url: "/images/counterfeiter.jpg"}, {name: "Negotiator", url: "/images/negotiator.jpg"}],
+    people: ["Racer", "Hacker", "Demolition", "Strongman", "Counterfeiter", "Negotiator"],
     risk: 40,
     result: true
   };
