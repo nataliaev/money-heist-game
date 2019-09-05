@@ -1,4 +1,5 @@
 import React from "react";
+import Sound from 'react-sound';
 import ButtonNewGame from "./ButtonNewGame";
 import ResultsFormContainer from "./ResultsFormContainer";
 
@@ -44,6 +45,10 @@ export default function Won(props) {
           setIsDistracting={setIsDistracting}
         />
       </div>
+      <Sound
+      url="/cool_sound.mp3"
+      playStatus={Sound.status.PLAYING}
+    />
     </div>
   );
 }
