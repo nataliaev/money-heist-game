@@ -14,7 +14,7 @@ export default function ResultsFormContainer(props) {
   const onSubmit = async event => {
     event.preventDefault();
     await request
-      .post("http://localhost:4000/result")
+      .post("https://guarded-caverns-04375.herokuapp.com/result")
       .send({
         name: isName,
         money: state.money,

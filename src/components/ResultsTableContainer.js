@@ -17,8 +17,8 @@ export default function ResultsTableContainer(props) {
 
   useEffect(() => {
     request
-      .get(`http://localhost:4000/money?offset=${offset}&limit=10`)
-      .then(response => setTableMoney(response.body.result))
+      .get(`https://guarded-caverns-04375.herokuapp.com/money?offset=${offset}&limit=10`)
+      .then(response => { setTableMoney(response.body.result) })
       .catch(console.error);
   }, [offset]);
 
