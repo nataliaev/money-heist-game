@@ -13,6 +13,7 @@ export default function MessageContainer(props) {
     dispatch,
     randomNumber,
     newRiskLevel,
+    riskLevelWithDistraction,
     continueGame,
     distraction
   } = props;
@@ -52,7 +53,7 @@ export default function MessageContainer(props) {
                   You will lose one of your team members and risk level for
                   tomorrow will be
                 </h3>
-                <h2>{state.risk - 10}%</h2>
+                <h2>{riskLevelWithDistraction}%</h2>
               </div>
             )}
           </button>

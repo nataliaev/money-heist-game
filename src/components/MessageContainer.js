@@ -11,7 +11,21 @@ export default function MessageContainer(props) {
 
   const randomNumber = randomIndex(messages.length);
 
-  const newRiskLevel = state.risk + messages[randomNumber].riskLevel;
+  let newRiskLevel = state.risk + messages[randomNumber].riskLevel
+
+  if (newRiskLevel < 0) {
+    newRiskLevel = 0
+  } else if (newRiskLevel > 100) {
+    newRiskLevel = 100
+  }
+
+  let riskLevelWithDistraction = state.risk - 10;
+
+  if (riskLevelWithDistraction < 0 ) {
+    riskLevelWithDistraction = 0
+  } else if (riskLevelWithDistraction> 100) {
+    riskLevelWithDistraction = 100
+  }
 
   const continueGame = () => {
     dispatch({
@@ -42,6 +56,7 @@ export default function MessageContainer(props) {
       dispatch={dispatch}
       randomNumber={randomNumber}
       newRiskLevel={newRiskLevel}
+      riskLevelWithDistraction={riskLevelWithDistraction}
       continueGame={continueGame}
       distraction={distraction}
     />
