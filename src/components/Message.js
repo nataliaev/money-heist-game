@@ -28,7 +28,7 @@ export default function MessageContainer(props) {
         <div className="note-box">
           <img
             className="note"
-            src="https://img.pngio.com/post-it-note-paper-square-sticky-note-png-note-png-900_660.jpg"
+            src="http://pngimg.com/uploads/sticky_note/sticky_note_PNG18899.png"
             alt="note"
           />
           <h2 className="message">{messages[randomNumber].message}</h2>
