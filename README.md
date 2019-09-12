@@ -9,6 +9,14 @@
 -   [React](https://reactjs.org)
 -   [Superagent](http://visionmedia.github.io/superagent/)
 
+## Features
+
+- You can make different choices to control the risk level in the game
+- At every game round you are getting a random message, that changes the risk level
+- You can delete members of your virtual team to reduce the risk level of the game
+- You lose or win the game on a random algorithm, that depends on the risk level
+- You can save your results in a database and see the table of best results
+
 ## Installation
 
 ```
