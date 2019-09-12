@@ -1,6 +1,6 @@
 # Money Heist Game
 
-#### The backend for this project [here](https://github.com/nataliaev/server-money-heist)
+#### The backend for this project [server-money-heist](https://github.com/nataliaev/server-money-heist)
 
 #### To play the game, head to [Money Heist](https://money-heist.netlify.com)
 
