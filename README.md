@@ -6,7 +6,7 @@
 
 ## Technologies used
 
--   [React](https://reactjs.org)
+-   [React](https://reactjs.org) (with React Hooks)
 -   [Superagent](http://visionmedia.github.io/superagent/)
 
 ## Features
