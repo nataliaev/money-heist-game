@@ -17,6 +17,8 @@
 - You lose or win the game on a random algorithm, that depends on the risk level
 - You can save your results in a database and see the table of best results
 
+![](Game-Money-Heist.gif)
+
 ## Installation
 
 ```
